@@ -1,0 +1,39 @@
+.about_container{
+    padding: 0 10%; /* top-bottom: 0 and left-right: 10%*/
+    height: 88vh;  /* 100vh means to take entire screen of the tag */
+    display: flex; /* this will bydefault set all the parent tags of about_container side by side but we need
+    top to bottom. so we will set the flex direction as column*/
+    flex-direction: column;
+    justify-content: center; /* align content at center vertically. It is a property of display. we have to use display;
+    flex first */
+
+    /* align-items: center //horizontally center */
+}
+.about_text1{
+    font-size: 22px;
+}
+.about_text2{
+    font-size: 65px;
+    font-weight: bold;
+    margin: -15px 0; /* to reduce the top-down margin*/
+}
+.about_text3{
+    font-size: 45px;
+}
+
+.highlighted_text {
+   color: red;
+}
+.about_description{
+    font-size: 25px;
+    line-height: 25px;  /* Space between the lines */
+} 
+.about_button{
+    font-size: 20px;
+    padding: 8px 16px;
+    margin-top: 30px;
+    background-color: #080808;
+    color: white;
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+}

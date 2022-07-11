@@ -1,0 +1,16 @@
+.ex_container{
+    margin: 150px 0;
+}
+
+.ex_title{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.ex_experiencebox_container {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* If screen it 100px and one div is 40px. So it will send the 3rd div to down
+    becoz 3 divs(120px) > 100px. This is called as wrap */
+}
