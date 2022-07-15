@@ -16,60 +16,32 @@ function Experience() {
 
     const experienceData = [
         {
-            title: "Amazon",
+            title: "AppyFlux technologies Pvt. Ltd",
             sentences: [
-                "Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
+                "Built the landing page websites of Appyflux and its product Zyadashop.",
+                "Built the Account Section of Web Version of ZyadaSshop Using VueJs.",
+                "Contributed as techincal support member by publishing customers applications in the Google Play Store and also by managing the daily notifications",
+                "Cleared queries and problems of the customers"
+                
 
             ],
             subtitles: "Tech used",
             images: [react, js, html]
         },
-        {
-            title: "AppyFlux",
-            sentences: [
-                "Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
+        // {
+        //     title: "Summer Training In DSA by GFGs",
+        //     sentences: [
+        //         "Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak",
+        //         "Ravi Shankar Nayak",
+        //         "Ravi Shankar Nayak",
 
-            ],
-            subtitles: "Tech used",
-            images: [react, js, html]
-        },
-        {
-            title: "Microsoft",
-            sentences: [
-                "Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
+        //     ],
+        //     subtitles: "Tech used",
+        //     images: [react, js, html]
+        // },
 
-            ],
-            subtitles: "Tech used",
-            images: [react, js, html]
-        },
-        {
-            title: "Microsoft",
-            sentences: [
-                "Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
 
-            ],
-            subtitles: "Tech used",
-            images: [react, js, html]
-        },
-        {
-            title: "Microsoft",
-            sentences: [
-                "Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
-                "Ravi Shankar Nayak",
 
-            ],
-            subtitles: "Tech used",
-            images: [react, js, html]
-        }
     ]
     return(
         <div className="ex_container">

@@ -19,7 +19,7 @@ function Navbar(){
               <p>Tools</p>
               <p>Experience</p>
               <p>Projects</p>
-              <p>Results</p>
+              <p>Resume</p>
             </div>
         </div>
         <div className="navbar_line">
