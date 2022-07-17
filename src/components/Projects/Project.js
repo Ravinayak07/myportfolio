@@ -13,6 +13,7 @@ function Project() {
       descriptions: [
         "> Movie Application in which you can search for your favourite movies",
         "> Shows Top Rated, Comedy, Actions Movies Separatly",
+        "> It is Deployed using Heroku.",
         "Technologies - Reactjs, JavaScript, HTML, CSS, Firebase.",
       ],
       link: "https://github.com/Ravinayak07/moviesbox",
@@ -21,11 +22,12 @@ function Project() {
       images: ravikart,
       title: "RaviKart",
       descriptions: [
-        "> This an ecommerce Web Application where user can shop any items.",
-        "> It's database is managed on Firestore and is hosted on Firebase.",
+        "> This an ecommerce Web Application where user can shop any items of his choice.",
+        "> It has Product Categories section, Signin , orders and cart sections",
+        "> It has 4 categories whose product details are fetched from an API",
         "> Technologies - Reactjs, JavaScript, HTML, CSS, Firebase.",
       ],
-      link: "https://github.com/Ravinayak07/E-commerce_Project_CipherSchools",
+      link: "https://ravikart.herokuapp.com/",
     },
     {
       images: portfolio,
