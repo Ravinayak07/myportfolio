@@ -1,0 +1,18 @@
+.contact_container{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact_form_container{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 4% 4%;
+}
+.contact_title{
+    font-size: 29px;
+    font-weight: 700;
+    font-family: cursive;
+
+}
+.contac

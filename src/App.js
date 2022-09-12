@@ -4,6 +4,7 @@ import About from './components/About/About';
 import TechStack from './components/TechStack/TechStack';
 import Experience from './components/Experience/Experience';
 import Project from './components/Projects/Project';
+import Contact from './components/Contact/Contact';
 
 //Components to be made:
 // 1.Navbar
@@ -22,6 +23,7 @@ function App() {
       <TechStack />
       <Experience />
       <Project />
+      <Contact />
     </div>
   );
 }
