@@ -5,7 +5,7 @@ import portfolio from "../../images/projects/portfolio.png";
 import moviesBox from "../../images/projects/moviesBox.png";
 import ravikart from "../../images/projects/ravikart.png";
 
-function Project() {
+function Project({ id }) {
   const projectData = [
     {
       images: moviesBox,
@@ -42,7 +42,7 @@ function Project() {
     },
   ];
   return (
-    <div>
+    <div id={id}>
       <p className="project_title">PROJECTS</p>
       <div className="projects_project_box_container">
         {projectData.map((value, key) => (

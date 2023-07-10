@@ -12,7 +12,7 @@ import cpp from "../../images/techStack/cpp.png";
 import bootstrap from "../../images/techStack/bootstrap.png";
 import TechStackIcon from "./TechStackIcon/TechStackIcon.js";
 
-function TechStack() {
+function TechStack({ id }) {
   const techstackData = [
     {
       iconImage: react,
@@ -72,17 +72,15 @@ function TechStack() {
   function showIcon(value) {
     return (
       <div className="techstack_image_element_container">
-           <img src={value.iconImage} alt={value.iconAltProperty} />
-           <p>{value.iconName}</p>
+        <img src={value.iconImage} alt={value.iconAltProperty} />
+        <p>{value.iconName}</p>
       </div>
-    )
+    );
   }
   return (
-
-    <div className="techstack_container">
+    <div id={id} className="techstack_container">
       <p className="techstack_title">Tech Stack</p>
       <div className="techstack_image_rows_container">
-
         {/* TWO METHODS:
          1. make a fun and return html from it 
         showIcon(value)
@@ -90,16 +88,12 @@ function TechStack() {
         <TechStackIcon data={value} />
          */}
 
-         
         {/* Using function */}
         <div className="techstack_image_row1_container">
-          {techstackData.map((value, key) => (
-             showIcon(value)
-          ))}
+          {techstackData.map((value, key) => showIcon(value))}
         </div>
 
-
-           {/* Using Functional Component */}
+        {/* Using Functional Component */}
         <div className="techstack_image_row1_container">
           {techstackData2.map((value, key) => (
             //   showIcon(value)

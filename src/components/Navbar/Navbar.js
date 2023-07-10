@@ -1,41 +1,29 @@
-import React from "react"; //not mandatory but a good practice. It tells the Navbar.js file that it is a react file
+import React, { useState } from "react";
 import "./Navbar.css";
-//creating a functional component
-function Navbar(){
-    
-    //js code
 
-    var name = "<RSN  />";
+function Navbar() {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+  var name = "<RSN  />";
 
-    return(
-        <div>
-        <div className="navbar_container">
-            <div className="navbar_left">
-              {name}
-            </div>
-    
-            <div className="navbar_right">
-              <p>About</p>
-              <p>Tools</p>
-              <p>Experience</p>
-              <p>Projects</p>
-              <p>Resume</p>
-            </div>
+  return (
+    <div>
+      <div className="navbar_container">
+        <div className="navbar_left">{name}</div>
+        <div className="navbar_right">
+          <p onClick={() => scrollToSection("aboutSection")}>About</p>
+          <p onClick={() => scrollToSection("toolsSection")}>Tools</p>
+          <p onClick={() => scrollToSection("experienceSection")}>Experience</p>
+          <p onClick={() => scrollToSection("projectsSection")}>Projects</p>
         </div>
-        <div className="navbar_line">
-           <hr />
-        </div>
-
+      </div>
+      <div className="navbar_line">
+        <hr />
+      </div>
     </div>
-    )
+  );
 }
 
 export default Navbar; //exporting so that we can import it from App.js
-
-/*
-Now will this code run? : No becoz we haven't called the functional component.
-Now syntax to call it:  <Navbar />
-
-So we need to first import this component(Navabr) inside App.js and then call it there
-
-*/
