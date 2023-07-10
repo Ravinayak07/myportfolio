@@ -17,23 +17,13 @@ function Experience({ id }) {
     {
       title: "AppyFlux technologies Pvt. Ltd",
       sentences: [
-        "Built the landing page websites of Appyflux and its product Zyadashop.",
-        "Built the Account Section of Web Version of ZyadaSshop Using VueJs.",
-        "Contributed as techincal support member by publishing customers applications in the Google Play Store and also by managing the daily notifications",
-        "Cleared queries and problems of the customers",
+        "- Built the landing page websites of Appyflux and its product Zyadashop.",
+        "- Built the Account Section of Web Version of ZyadaSshop Using VueJs.",
+        "- Contributed as techincal support member by publishing customers applications in the Google Play Store and also by managing the daily notifications",
+        "- Cleared queries and problems of the customers",
       ],
       subtitles: "Tech used",
       images: [react, js, html],
-    },
-    {
-      title: "Freelance",
-      sentences: [
-        "Successfully delivered high-quality websites for various clients and their companies.",
-        "Also did machine and deep learning projects for Final Year Students through freelancework.",
-      ],
-      subtitles: "Tech used",
-      images: [react, js, html],
-      // images: [JavaScript, Python, Flask, Wordpress, TensorFlow],
     },
     {
       title: "LTIMindtree",
@@ -42,6 +32,16 @@ function Experience({ id }) {
       ],
       subtitles: "Tech used",
       images: [react, js, html],
+    },
+    {
+      title: "Freelance Web Developer",
+      sentences: [
+        "Successfully delivered high-quality websites for various clients and their companies.",
+        "Also did machine and deep learning projects for Final Year Students through freelancework.",
+      ],
+      subtitles: "Tech used",
+      images: [react, js, html],
+      // images: [JavaScript, Python, Flask, Wordpress, TensorFlow],
     },
   ];
   return (

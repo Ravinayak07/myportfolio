@@ -1,41 +1,49 @@
 .navbar_container {
-    background-color: orangered;
-    display: flex; /*puts the parent tags(navbar left and right) of navbar container
+    background-color: #0A66C2;
+    display: flex;
+    /*puts the parent tags(navbar left and right) of navbar container
                    side by side */
-  align-items: center; /* this is top-down center not horizontal center*/
-  justify-content: space-between; /* adds equal space between the parent tags(navbar left and right)*/
-  padding-left: 10%;
-  padding-right: 10%; /* % is essential for responsiveness. */
-  background-color: black;
-  color: whitesmoke;
-  
-  
+    align-items: center;
+    /* this is top-down center not horizontal center*/
+    justify-content: space-between;
+    /* adds equal space between the parent tags(navbar left and right)*/
+    padding-left: 10%;
+    padding-right: 10%;
+    /* % is essential for responsiveness. */
+    background-color: black;
+    color: whitesmoke;
+
+
 }
 
 .navbar_left {
     font-size: 28px;
-    font-weight: 700; /*700 and bold are same */
-    color: orangered;
+    font-weight: 700;
+    /*700 and bold are same */
+    color: #0A66C2;
 }
+
 .navbar_right {
-    display: flex;/*puts the parent tags(all <p>s) of navbar_right side by side */
+    display: flex;
+    /*puts the parent tags(all <p>s) of navbar_right side by side */
 }
 
 /* means all the <p> tags of the navbar_right */
-.navbar_right > p{    
+.navbar_right>p {
     margin-left: 12px;
     margin-right: 12px;
-    padding: 10px 12px; /*all p will keep this much padding so that when hovered, it doesnot break*/
+    padding: 10px 12px;
+    /*all p will keep this much padding so that when hovered, it doesnot break*/
     font-size: 18px;
 }
 
-.navbar_right > p:hover{
-    background-color: lightblue;
+.navbar_right>p:hover {
+    background-color: #0A66C2;
     border-radius: 10px;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
-.navbar_line > hr{
+.navbar_line>hr {
     width: 100%;
 }
