@@ -6,21 +6,23 @@ function Navbar() {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
   };
-  var name = "<RSN  />";
+  const name = "RAVI";
 
   return (
     <div>
       <div className="navbar_container">
-        <div className="navbar_left">{name}</div>
-        <div className="navbar_right">
-          <p onClick={() => scrollToSection("aboutSection")}>About</p>
-          <p onClick={() => scrollToSection("toolsSection")}>Tools</p>
+        <a href="/" className="logo">
+          <i class="fa-solid fa-code fa-spin fa-spin-reverse"></i> {name}
+        </a>
+        <div className="navbar">
+          <p className="active" onClick={() => scrollToSection("aboutSection")}>
+            About
+          </p>
+          <p onClick={() => scrollToSection("toolsSection")}>Skills</p>
           <p onClick={() => scrollToSection("experienceSection")}>Experience</p>
           <p onClick={() => scrollToSection("projectsSection")}>Projects</p>
+          <p onClick={() => scrollToSection("projectsSection")}>Contact</p>
         </div>
-      </div>
-      <div className="navbar_line">
-        <hr />
       </div>
     </div>
   );

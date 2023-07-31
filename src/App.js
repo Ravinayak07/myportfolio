@@ -4,6 +4,7 @@ import About from "./components/About/About";
 import TechStack from "./components/TechStack/TechStack";
 import Experience from "./components/Experience/Experience";
 import Project from "./components/Projects/Project";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (

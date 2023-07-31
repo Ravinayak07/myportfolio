@@ -20,6 +20,14 @@
 
 }
 
+.about_container #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .about_container>img {
     width: 20%;
     height: 20%;
@@ -33,14 +41,14 @@
 }
 
 .about_text2 {
-    font-size: 65px;
+    font-size: 40px;
     font-weight: bold;
     margin: -15px 0;
     /* to reduce the top-down margin*/
 }
 
 .about_text3 {
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .highlighted_text {
@@ -49,7 +57,6 @@
 
 .about_description {
     font-size: 25px;
-    line-height: 25px;
     /* Space between the lines */
 }
 
