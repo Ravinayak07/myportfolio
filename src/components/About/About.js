@@ -48,7 +48,7 @@ function About({ id }) {
             <button className="about_button">Get in Touch</button>
           </a>
         </div>
-        <img src="../../assets/images/Profile.png" />
+        {/* <img src="../../assets/images/Profile.png" /> */}
       </div>
     </>
   );
