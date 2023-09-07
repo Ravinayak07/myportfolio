@@ -2,6 +2,7 @@ import react from "react";
 import "./About.css";
 import TypedComponent from "./TypedComponent";
 import github from "../../images/github.png";
+import profile from "../../images/profile.png";
 import linkedin from "../../images/linkedin.png"; /* We need to add extension for every file except .js files */
 function About({ id }) {
   return (
@@ -48,7 +49,7 @@ function About({ id }) {
             <button className="about_button">Get in Touch</button>
           </a>
         </div>
-        {/* <img src="../../assets/images/Profile.png" /> */}
+        <img src={profile} />
       </div>
     </>
   );

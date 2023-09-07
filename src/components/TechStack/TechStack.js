@@ -10,6 +10,11 @@ import css from "../../images/techStack/css.png";
 import python from "../../images/techStack/python.png";
 import cpp from "../../images/techStack/cpp.png";
 import bootstrap from "../../images/techStack/bootstrap.png";
+import git from "../../images/techStack/git.png";
+import java from "../../images/techStack/java.png";
+import mysql from "../../images/techStack/mysql.png";
+import php from "../../images/techStack/php.png";
+import typescript from "../../images/techStack/typescript.png";
 import TechStackIcon from "./TechStackIcon/TechStackIcon.js";
 
 function TechStack({ id }) {
@@ -25,28 +30,48 @@ function TechStack({ id }) {
       iconName: "VueJs",
     },
     {
-      iconImage: js,
-      iconAltproperty: "jsImage",
-      iconName: "JS",
-    },
-    {
       iconImage: nodejs,
       iconAltproperty: "NodeJsImage",
       iconName: "NodeJs",
     },
     {
-      iconImage: firebase,
-      iconAltproperty: "firebaseImage",
-      iconName: "Firebase",
+      iconImage: bootstrap,
+      iconAltProperty: "bootstrapImage",
+      iconName: "Bootstrap",
     },
-  ];
-
-  const techstackData2 = [
+    {
+      iconImage: git,
+      iconAltProperty: "gitImage",
+      iconName: "Git",
+    },
     {
       iconImage: cpp,
       iconAltProperty: "cppImage",
       iconName: "CPP",
     },
+    {
+      iconImage: java,
+      iconAltProperty: "javaImage",
+      iconName: "Java",
+    },
+    {
+      iconImage: python,
+      iconAltProperty: "pythonImage",
+      iconName: "Python",
+    },
+    {
+      iconImage: php,
+      iconAltProperty: "phpImage",
+      iconName: "PHP",
+    },
+    {
+      iconImage: mysql,
+      iconAltproperty: "mysqlImage",
+      iconName: "MySQL",
+    },
+  ];
+
+  const techstackData2 = [
     {
       iconImage: html,
       iconAltProperty: "htmlImage",
@@ -58,14 +83,19 @@ function TechStack({ id }) {
       iconName: "CSS",
     },
     {
-      iconImage: python,
-      iconAltProperty: "pythonImage",
-      iconName: "Python",
+      iconImage: js,
+      iconAltproperty: "jsImage",
+      iconName: "JavaScript",
     },
     {
-      iconImage: bootstrap,
-      iconAltProperty: "bootstrapImage",
-      iconName: "Bootstrap",
+      iconImage: typescript,
+      iconAltproperty: "tsImage",
+      iconName: "TypeScript",
+    },
+    {
+      iconImage: firebase,
+      iconAltproperty: "firebaseImage",
+      iconName: "Firebase",
     },
   ];
 
