@@ -9,29 +9,15 @@ function About({ id }) {
     <>
       <div id={id} className="about_container">
         <div className="aboutBio">
-          <p className="about_text1">
-            <span className="highlighted_text">Hi</span> my name is
+          <p className="about_text">
+            <span>Hi</span> my name is
           </p>
-          <p className="about_text2">Ravi Shankar Nayak</p>
-          <p className="about_text3">
-            {/* I am a <span className="highlighted_text">Front-End </span>Developer */}
-            <TypedComponent />
-          </p>
-          <p className="about_description">
-            I am did my graduation in Computer Science Student from
-            <span className="highlighted_text">
-              {" "}
-              Lovely Professional University
+          <p className="about_text">Ravi Shankar Nayak</p>
+          <p className="about_text">
+            I am
+            <span className="about_text2">
+              <TypedComponent />
             </span>
-            .
-            <br />
-            <br />I Love making{" "}
-            <span className="highlighted_text">Frond-End </span>
-            Web Development Projects
-            <br />
-            <br />I am an <span className="highlighted_text">Cloud</span>{" "}
-            Enthusiast and also Love contributing to{" "}
-            <span className="highlighted_text">open source</span> Projects
           </p>
           <div>
             <a href="https://github.com/Ravinayak07" target="_blank">

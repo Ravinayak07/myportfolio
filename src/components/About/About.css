@@ -17,16 +17,10 @@
 .about_container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
 }
 
-.about_container #particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
 
 .about_container>img {
     width: 20%;
@@ -36,24 +30,21 @@
     margin-right: 20rem;
 }
 
-.about_text1 {
-    font-size: 22px;
+
+.about_text {
+    font-size: 40px;
+    font-weight: bold;
+    /* to reduce the top-down margin*/
 }
 
 .about_text2 {
     font-size: 40px;
     font-weight: bold;
-    margin: -15px 0;
+    color: #0A66C2;
     /* to reduce the top-down margin*/
 }
 
-.about_text3 {
-    font-size: 40px;
-}
 
-.highlighted_text {
-    color: #0A66C2;
-}
 
 .about_description {
     font-size: 25px;

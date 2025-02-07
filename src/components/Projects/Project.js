@@ -40,6 +40,17 @@ function Project({ id }) {
       ],
       link: "https://rsn-portfolio.web.app/",
     },
+    {
+      images: portfolio,
+      title: "The Hungry Snake",
+      descriptions: [
+        "> It is a website which answers to the question who am I?",
+        "> Have a look at it, and please feel free to contact anytime.",
+        "> It is deployed using heroku",
+        "Technologies - Reactjs, JavaScript, HTML, CSS, Firebase.",
+      ],
+      link: "https://github.com/Ravinayak07/The_Hungry_Snake",
+    },
   ];
   return (
     <div id={id}>

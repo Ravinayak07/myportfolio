@@ -6,7 +6,7 @@ const TypedComponent = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["I am a Front-End Developer"],
+      strings: ["Front-End Developer", "Azure DevOps Engineer"],
       typeSpeed: 50,
       loop: true,
     };
