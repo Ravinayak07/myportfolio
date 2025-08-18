@@ -10,12 +10,12 @@
 }
 
 .techstack_image_rows_container {
-
     background: rgba(165, 165, 240, 0.4);
     color: #fff;
     border-radius: 1rem;
     margin: auto;
     margin-top: 2rem;
+    padding: 2%;
 
 }
 

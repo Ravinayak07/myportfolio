@@ -4,7 +4,7 @@
     /* this is top-down center not horizontal center*/
     justify-content: space-between;
     /* % is essential for responsiveness. */
-    background-color: black;
+    background-color: #031926;
     color: whitesmoke;
     box-shadow: 0 1px 4px white;
     z-index: 1000;

@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "./TechStack.css";
 import react from "../../images/techStack/react.png";
 import vuejs from "../../images/techStack/vuejs.png";
@@ -100,19 +99,12 @@ function TechStack({ id }) {
     },
   ];
 
-  function showIcon(value, key) {
+  function showIcon(value) {
     return (
-      <motion.div
-        key={key}
-        className="techstack_image_element_container"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: key * 0.1 }}
-        viewport={{ once: false, amount: 0.2 }} // 👈 triggers each time
-      >
-        <img src={value.iconImage} alt={value.iconName} />
+      <div className="techstack_image_element_container">
+        <img src={value.iconImage} alt={value.iconAltProperty} />
         <p>{value.iconName}</p>
-      </motion.div>
+      </div>
     );
   }
   return (
@@ -134,16 +126,8 @@ function TechStack({ id }) {
         {/* Using Functional Component */}
         <div className="techstack_image_row1_container">
           {techstackData2.map((value, key) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: key * 0.1 }}
-              viewport={{ once: false, amount: 0.2 }} // 👈 same here
-            >
-              {/* showIcon(value) */}
-              <TechStackIcon data={value} />
-            </motion.div>
+            //   showIcon(value)
+            <TechStackIcon data={value} />
           ))}
         </div>
       </div>

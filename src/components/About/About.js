@@ -1,13 +1,16 @@
-import react from "react";
+import React from "react";
 import "./About.css";
 import TypedComponent from "./TypedComponent";
 import github from "../../images/github.png";
-import profile from "../../images/profile.png";
-import linkedin from "../../images/linkedin.png"; /* We need to add extension for every file except .js files */
+import profile from "../../images/profile2.jpeg";
+import linkedin from "../../images/linkedin.png";
+import Particle from "../../Particle"; // ✅ make sure you import it
+
 function About({ id }) {
   return (
-    <>
-      <div id={id} className="about_container">
+    <section id={id} className="about-section">
+      <Particle /> {/* Particles will stay inside this section */}
+      <div className="about_container">
         <div className="aboutBio">
           <p className="about_text">
             <span>Hi</span> my name is
@@ -28,16 +31,16 @@ function About({ id }) {
               href="https://www.linkedin.com/in/ravi-shankar-nayak-302881192/"
               target="_blank"
             >
-              <img src={linkedin} alt="github" />
+              <img src={linkedin} alt="linkedin" />
             </a>
           </div>
           <a href="mailto: ravishankarnayak2000@gmail.com">
             <button className="about_button">Get in Touch</button>
           </a>
         </div>
-        <img src={profile} />
+        <img src={profile} alt="profile" />
       </div>
-    </>
+    </section>
   );
 }
 
