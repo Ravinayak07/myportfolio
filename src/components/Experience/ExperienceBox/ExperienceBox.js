@@ -18,7 +18,7 @@ function ExperienceBox({title, sentences, subtitles, images}) {
             <p className="ex_box_subtitles">{subtitles}</p>
             <div className="ex_box_images">
                 {images.map((value, key)=>(
-                   <img src={value} />
+                   <img key={key} src={value} alt="tech icon" />
                 ))}
             </div>
         </div>

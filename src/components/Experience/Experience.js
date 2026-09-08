@@ -5,17 +5,11 @@ import react from "../../images/techStack/react.png";
 import vuejs from "../../images/techStack/vuejs.png";
 import js from "../../images/techStack/js.png";
 import nodejs from "../../images/techStack/nodejs.png";
-import firebase from "../../images/techStack/firebase.png";
 import html from "../../images/techStack/html.png";
 import css from "../../images/techStack/css.png";
 import python from "../../images/techStack/python.png";
-import cpp from "../../images/techStack/cpp.png";
 import bootstrap from "../../images/techStack/bootstrap.png";
 import git from "../../images/techStack/git.png";
-import java from "../../images/techStack/java.png";
-import mysql from "../../images/techStack/mysql.png";
-import php from "../../images/techStack/php.png";
-import typescript from "../../images/techStack/typescript.png";
 
 function Experience({ id }) {
   const experienceData = [

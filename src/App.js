@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar/Navbar"; //or Navbar.js
-import Navbarr from "./components/Navbarr/Navbarr"; //or Navbar.js
 import About from "./components/About/About";
 import TechStack from "./components/TechStack/TechStack";
 import Experience from "./components/Experience/Experience";
@@ -9,7 +8,6 @@ import SyncLoader from "react-spinners/SyncLoader";
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [Loading, SetLoading] = useState(true);

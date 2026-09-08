@@ -23,13 +23,14 @@ function About({ id }) {
             </span>
           </p>
           <div>
-            <a href="https://github.com/Ravinayak07" target="_blank">
+            <a href="https://github.com/Ravinayak07" target="_blank" rel="noopener noreferrer">
               <img src={github} alt="github" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/ravi-shankar-nayak-302881192/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img src={linkedin} alt="linkedin" />
             </a>
