@@ -1,153 +1,265 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./TechStack.css";
-import react from "../../images/techStack/react.png";
-import vuejs from "../../images/techStack/vuejs.png";
-import js from "../../images/techStack/js.png";
-import nodejs from "../../images/techStack/nodejs.png";
-import firebase from "../../images/techStack/firebase.png";
-import html from "../../images/techStack/html.png";
-import css from "../../images/techStack/css.png";
-import python from "../../images/techStack/python.png";
-import cpp from "../../images/techStack/cpp.png";
-import bootstrap from "../../images/techStack/bootstrap.png";
-import git from "../../images/techStack/git.png";
-import java from "../../images/techStack/java.png";
-import mysql from "../../images/techStack/mysql.png";
-import php from "../../images/techStack/php.png";
-import typescript from "../../images/techStack/typescript.png";
-import TechStackIcon from "./TechStackIcon/TechStackIcon.js";
+import { 
+  Code, 
+  Server, 
+  Layout, 
+  Database, 
+  Cloud, 
+  Cpu, 
+  Sparkles,
+  Zap,
+  ShieldCheck,
+  Flame,
+  Layers,
+  Terminal,
+  Activity
+} from "lucide-react";
+
+// Existing image assets
+import reactImg from "../../images/techStack/react.png";
+import vueImg from "../../images/techStack/vuejs.png";
+import jsImg from "../../images/techStack/js.png";
+import nodeImg from "../../images/techStack/nodejs.png";
+import firebaseImg from "../../images/techStack/firebase.png";
+import pythonImg from "../../images/techStack/python.png";
+import cppImg from "../../images/techStack/cpp.png";
+import javaImg from "../../images/techStack/java.png";
+import mysqlImg from "../../images/techStack/mysql.png";
+import tsImg from "../../images/techStack/typescript.png";
 
 function TechStack({ id }) {
-  const techstackData = [
+  const [activeTab, setActiveTab] = useState("all");
+
+  const categories = [
+    { id: "all", label: "All Stack", icon: Sparkles },
+    { id: "languages", label: "Languages", icon: Code },
+    { id: "backend", label: "Backend & Microservices", icon: Server },
+    { id: "frontend", label: "Frontend & Mobile", icon: Layout },
+    { id: "databases", label: "Databases & Vector", icon: Database },
+    { id: "cloud", label: "Cloud & DevOps", icon: Cloud },
+    { id: "ai", label: "AI & Security", icon: Cpu },
+  ];
+
+  // Core highlighted technologies for Orbit Grid
+  const featuredCoreStack = [
+    { name: "Go", tag: "Backend & Microservices", icon: "GO", color: "#00ADD8" },
+    { name: "Rust", tag: "Async & AI Agents", icon: "RS", color: "#F74C00" },
+    { name: "TypeScript", tag: "Full Stack & SDKs", img: tsImg, color: "#3178C6" },
+    { name: "Google Gemini 2.0", tag: "LLMs & Function Calling", lucide: Sparkles, color: "#8E75FF" },
+    { name: "React / Next.js", tag: "SSR & Web Apps", img: reactImg, color: "#61DAFB" },
+    { name: "Vue 3 / Nuxt 4", tag: "Dashboards & Pinia", img: vueImg, color: "#4FC08D" },
+    { name: "PostgreSQL", tag: "Relational & SQLx", lucide: Database, color: "#4169E1" },
+    { name: "Docker & Azure", tag: "Cloud Infrastructure", lucide: Cloud, color: "#0078D4" },
+  ];
+
+  const skillGroups = [
     {
-      iconImage: react,
-      iconAltproperty: "reactImage",
-      iconName: "React",
+      category: "languages",
+      title: "Languages",
+      icon: Code,
+      skills: [
+        { name: "Go", level: "Expert", tag: "Fiber, Concurrency", abbr: "GO", color: "#00ADD8" },
+        { name: "Rust", level: "Advanced", tag: "Axum, Tokio", abbr: "RS", color: "#F74C00" },
+        { name: "TypeScript", level: "Expert", tag: "Full Stack & Node", img: tsImg, color: "#3178C6" },
+        { name: "JavaScript", level: "Expert", tag: "ES6+, V8 Engine", img: jsImg, color: "#F7DF1E" },
+        { name: "Python", level: "Advanced", tag: "FastAPI, Flask, DSA", img: pythonImg, color: "#3776AB" },
+        { name: "Java", level: "Proficient", tag: "Spring Boot Enterprise", img: javaImg, color: "#ED8B00" },
+        { name: "Kotlin", level: "Proficient", tag: "Android Native", abbr: "KT", color: "#7F52FF" },
+        { name: "SQL", level: "Expert", tag: "Complex Analytics", lucide: Database, color: "#4169E1" },
+        { name: "C++", level: "Proficient", tag: "Data Structures", img: cppImg, color: "#00599C" },
+      ],
     },
     {
-      iconImage: vuejs,
-      iconAltproperty: "vueJsImage",
-      iconName: "VueJs",
+      category: "backend",
+      title: "Backend & Microservices",
+      icon: Server,
+      skills: [
+        { name: "Go (Fiber)", level: "Core", tag: "High-Throughput APIs", abbr: "FIB", color: "#00ADD8" },
+        { name: "Rust (Axum)", level: "Core", tag: "Async AI Mesh", abbr: "AX", color: "#F74C00" },
+        { name: "Node.js", level: "Core", tag: "GraphQL & Event Driven", img: nodeImg, color: "#339933" },
+        { name: "Spring Boot", level: "Experienced", tag: "Microservices", abbr: "SB", color: "#6DB33F" },
+        { name: "FastAPI", level: "Experienced", tag: "AI Endpoints", abbr: "FA", color: "#009688" },
+        { name: "REST & GraphQL", level: "Expert", tag: "API Schemas & Auth", lucide: Activity, color: "#E535AB" },
+        { name: "NATS JetStream", level: "Advanced", tag: "Streaming Mesh", abbr: "NATS", color: "#00C39A" },
+      ],
     },
     {
-      iconImage: nodejs,
-      iconAltproperty: "NodeJsImage",
-      iconName: "NodeJs",
+      category: "frontend",
+      title: "Frontend & Mobile",
+      icon: Layout,
+      skills: [
+        { name: "React", level: "Expert", tag: "Web Applications", img: reactImg, color: "#61DAFB" },
+        { name: "Next.js", level: "Expert", tag: "SSR & App Router", abbr: "NEXT", color: "#FFFFFF" },
+        { name: "Vue 3", level: "Expert", tag: "Composition API", img: vueImg, color: "#4FC08D" },
+        { name: "Nuxt 4", level: "Expert", tag: "SSR Dashboards", abbr: "NUXT", color: "#00DC82" },
+        { name: "Tailwind CSS", level: "Expert", tag: "Glassmorphism UI", lucide: Layers, color: "#38BDF8" },
+        { name: "Jetpack Compose", level: "Advanced", tag: "Android UI", abbr: "CMP", color: "#4285F4" },
+        { name: "SwiftUI", level: "Advanced", tag: "iOS Native Apps", abbr: "SW", color: "#F05138" },
+      ],
     },
     {
-      iconImage: bootstrap,
-      iconAltProperty: "bootstrapImage",
-      iconName: "Bootstrap",
+      category: "databases",
+      title: "Databases & Vector DB",
+      icon: Database,
+      skills: [
+        { name: "PostgreSQL", level: "Expert", tag: "SQLx, Liquibase", lucide: Database, color: "#4169E1" },
+        { name: "Qdrant", level: "Advanced", tag: "Vector RAG Embeddings", abbr: "QDR", color: "#DC2626" },
+        { name: "Redis", level: "Expert", tag: "Cache & Rate Limiting", abbr: "RDS", color: "#DC382D" },
+        { name: "ClickHouse", level: "Advanced", tag: "Columnar Analytics", abbr: "CH", color: "#FFCC00" },
+        { name: "MySQL", level: "Experienced", tag: "Relational DB", img: mysqlImg, color: "#4479A1" },
+        { name: "Firestore", level: "Expert", tag: "Realtime Store", img: firebaseImg, color: "#FFCA28" },
+      ],
     },
     {
-      iconImage: git,
-      iconAltProperty: "gitImage",
-      iconName: "Git",
+      category: "cloud",
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      skills: [
+        { name: "AWS Services", level: "Advanced", tag: "EC2, S3, Lambda, VPC", abbr: "AWS", color: "#FF9900" },
+        { name: "Azure Services", level: "Advanced", tag: "App Services, Pipelines", abbr: "AZ", color: "#0078D4" },
+        { name: "Docker", level: "Expert", tag: "Containerization", abbr: "DCK", color: "#2496ED" },
+        { name: "Kubernetes", level: "Experienced", tag: "K8s Orchestration", abbr: "K8S", color: "#326CE5" },
+        { name: "CI/CD Pipelines", level: "Expert", tag: "Zero-Downtime Builds", lucide: Flame, color: "#F05032" },
+        { name: "OpenTelemetry", level: "Experienced", tag: "Tracing & Observability", abbr: "OTEL", color: "#F5A800" },
+      ],
     },
     {
-      iconImage: cpp,
-      iconAltProperty: "cppImage",
-      iconName: "CPP",
-    },
-    {
-      iconImage: java,
-      iconAltProperty: "javaImage",
-      iconName: "Java",
-    },
-    {
-      iconImage: python,
-      iconAltProperty: "pythonImage",
-      iconName: "Python",
-    },
-    {
-      iconImage: php,
-      iconAltProperty: "phpImage",
-      iconName: "PHP",
-    },
-    {
-      iconImage: mysql,
-      iconAltproperty: "mysqlImage",
-      iconName: "MySQL",
+      category: "ai",
+      title: "AI & Security Workflows",
+      icon: Cpu,
+      skills: [
+        { name: "Gemini 2.0 Flash", level: "Expert", tag: "Function Calling AI", lucide: Sparkles, color: "#8E75FF" },
+        { name: "RAG Systems", level: "Expert", tag: "Vector Search Injection", abbr: "RAG", color: "#34D399" },
+        { name: "Firebase AI", level: "Advanced", tag: "Voice & Multimodal", img: firebaseImg, color: "#FFCA28" },
+        { name: "Prompt Engineering", level: "Expert", tag: "Structured Outputs", lucide: Terminal, color: "#38BDF8" },
+        { name: "OAuth 2.0 & JWT", level: "Expert", tag: "RBAC Security", lucide: ShieldCheck, color: "#10B981" },
+        { name: "Passkeys & WebAuthn", level: "Advanced", tag: "Biometric 2FA Auth", lucide: Zap, color: "#F59E0B" },
+      ],
     },
   ];
 
-  const techstackData2 = [
-    {
-      iconImage: html,
-      iconAltProperty: "htmlImage",
-      iconName: "HTML",
-    },
-    {
-      iconImage: css,
-      iconAltProperty: "cssImage",
-      iconName: "CSS",
-    },
-    {
-      iconImage: js,
-      iconAltproperty: "jsImage",
-      iconName: "JavaScript",
-    },
-    {
-      iconImage: typescript,
-      iconAltproperty: "tsImage",
-      iconName: "TypeScript",
-    },
-    {
-      iconImage: firebase,
-      iconAltproperty: "firebaseImage",
-      iconName: "Firebase",
-    },
-  ];
+  const filteredGroups = activeTab === "all" 
+    ? skillGroups 
+    : skillGroups.filter(g => g.category === activeTab);
 
-  function showIcon(value, key) {
-    return (
-      <motion.div
-        key={key}
-        className="techstack_image_element_container"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: key * 0.1 }}
-        viewport={{ once: false, amount: 0.2 }} // 👈 triggers each time
-      >
-        <img src={value.iconImage} alt={value.iconName} />
-        <p>{value.iconName}</p>
-      </motion.div>
-    );
-  }
   return (
-    <div id={id} className="techstack_container">
-      <p className="techstack_title">Tech Stack</p>
-      <div className="techstack_image_rows_container">
-        {/* TWO METHODS:
-         1. make a fun and return html from it 
-        showIcon(value)
-        2. create a component and pass props to make it work acc to our needs
-        <TechStackIcon data={value} />
-         */}
-
-        {/* Using function */}
-        <div className="techstack_image_row1_container">
-          {techstackData.map((value, key) => showIcon(value))}
+    <section id={id} className="techstack-section">
+      <div className="container">
+        <div className="section-header">
+          <span className="section-tag">
+            <Sparkles size={14} /> Core Capabilities
+          </span>
+          <h2 className="section-title">Technical Expertise</h2>
+          <p className="section-subtitle">
+            Modern full-stack engineering, high-performance distributed systems, cloud microservices, and AI integrations.
+          </p>
         </div>
 
-        {/* Using Functional Component */}
-        <div className="techstack_image_row1_container">
-          {techstackData2.map((value, key) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: key * 0.1 }}
-              viewport={{ once: false, amount: 0.2 }} // 👈 same here
-            >
-              {/* showIcon(value) */}
-              <TechStackIcon data={value} />
-            </motion.div>
-          ))}
+        {/* Top Featured Core Tech Grid */}
+        <div className="core-stack-showcase">
+          <div className="showcase-header">
+            <Zap size={18} className="zap-icon" />
+            <span>Flagship Tech Stack</span>
+          </div>
+
+          <div className="core-stack-grid">
+            {featuredCoreStack.map((tech, idx) => (
+              <motion.div
+                key={idx}
+                className="core-stack-card glass-card"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="core-card-icon" style={{ borderColor: tech.color }}>
+                  {tech.img ? (
+                    <img src={tech.img} alt={tech.name} className="tech-icon-img" />
+                  ) : tech.lucide ? (
+                    <tech.lucide size={22} style={{ color: tech.color }} />
+                  ) : (
+                    <span className="tech-icon-abbr" style={{ color: tech.color }}>{tech.icon}</span>
+                  )}
+                </div>
+                <div className="core-card-details">
+                  <span className="core-tech-name">{tech.name}</span>
+                  <span className="core-tech-tag">{tech.tag}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="tech-filter-tabs">
+          {categories.map((cat) => {
+            const Icon = cat.icon;
+            return (
+              <button
+                key={cat.id}
+                className={`filter-tab-btn ${activeTab === cat.id ? "active" : ""}`}
+                onClick={() => setActiveTab(cat.id)}
+              >
+                <Icon size={16} />
+                <span>{cat.label}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Categorized Bento Grid */}
+        <div className={`skill-groups-grid ${activeTab !== "all" ? "single-view" : ""}`}>
+          {filteredGroups.map((group, groupIdx) => {
+            const GroupIcon = group.icon;
+            return (
+              <motion.div
+                key={group.category}
+                className="skill-group-card glass-card"
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: groupIdx * 0.08 }}
+              >
+                <div className="group-card-header">
+                  <div className="group-icon-badge">
+                    <GroupIcon size={20} />
+                  </div>
+                  <h3 className="group-card-title">{group.title}</h3>
+                  <span className="group-count">{group.skills.length} Technologies</span>
+                </div>
+
+                {/* Grid of Visual Tech Badges */}
+                <div className="skills-badge-grid">
+                  {group.skills.map((skill, sIdx) => {
+                    const LucideIcon = skill.lucide;
+                    return (
+                      <div key={sIdx} className="tech-tile-badge">
+                        <div className="tile-icon-box" style={{ borderColor: `${skill.color}40`, backgroundColor: `${skill.color}12` }}>
+                          {skill.img ? (
+                            <img src={skill.img} alt={skill.name} className="tile-img" />
+                          ) : LucideIcon ? (
+                            <LucideIcon size={18} style={{ color: skill.color }} />
+                          ) : (
+                            <span className="tile-abbr" style={{ color: skill.color }}>{skill.abbr}</span>
+                          )}
+                        </div>
+
+                        <div className="tile-info">
+                          <div className="tile-name-row">
+                            <span className="tile-name">{skill.name}</span>
+                            <span className="tile-level-dot" style={{ backgroundColor: skill.color }} title={skill.level} />
+                          </div>
+                          <span className="tile-tag">{skill.tag}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

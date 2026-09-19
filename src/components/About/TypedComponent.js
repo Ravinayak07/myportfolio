@@ -6,8 +6,14 @@ const TypedComponent = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["Front-End Developer", "Azure DevOps Engineer"],
+      strings: [
+        "Full Stack Developer",
+        "AI Systems Engineer",
+        "Cloud & Microservices Architect",
+      ],
       typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 1800,
       loop: true,
     };
 
@@ -18,11 +24,7 @@ const TypedComponent = () => {
     };
   }, []);
 
-  return (
-    <div>
-      <span ref={typedRef}></span>
-    </div>
-  );
+  return <span ref={typedRef} className="typed-text-glow"></span>;
 };
 
 export default TypedComponent;

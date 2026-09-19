@@ -1,52 +1,52 @@
-import Navbar from "./components/Navbar/Navbar"; //or Navbar.js
+import React, { useEffect, useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import TechStack from "./components/TechStack/TechStack";
 import Experience from "./components/Experience/Experience";
 import Project from "./components/Projects/Project";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import Education from "./components/Education/Education";
+import Contact from "./components/Contact/Contact";
 import SyncLoader from "react-spinners/SyncLoader";
-import { useEffect, useState } from "react";
-import Lottie from "lottie-react";
-import nightsky from "./LottieFiles/night-sky.json";
 
 function App() {
-  const [Loading, SetLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    SetLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1200);
 
-    setTimeout(() => {
-      SetLoading(false);
-    }, 1900);
+    return () => clearTimeout(timer);
   }, []);
+
   return (
     <>
-      {Loading ? (
+      {loading ? (
         <div className="loader">
           <SyncLoader
-            color={"#0A66C2"}
+            color={"#38bdf8"}
             loading={true}
-            size={40}
+            size={24}
+            margin={6}
             aria-label="Loading Spinner"
-            data-testid="loader"
           />
+          <span className="loader-text">INITIALIZING SYSTEM...</span>
         </div>
       ) : (
         <div className="App">
-          <Lottie className="bg" animationData={nightsky} loop={true} />
           <Navbar />
-          <About id="aboutSection" />
-          <TechStack id="toolsSection" />
-          <Experience id="experienceSection" />
-          <Project id="projectsSection" />
+          <main>
+            <About id="aboutSection" />
+            <TechStack id="toolsSection" />
+            <Experience id="experienceSection" />
+            <Project id="projectsSection" />
+            <Education id="educationSection" />
+          </main>
+          <Contact id="contactSection" />
         </div>
       )}
-      ;
     </>
   );
 }
-
-//All components are imported and called in App.js and App.js is imported and called in
-//index.js. so you can say that All components inside index.js
 
 export default App;

@@ -1,64 +1,329 @@
-.techstack_container {
-    min-height: 90vh;
-    padding: 0rem 10rem;
+.techstack-section {
+  padding: 6rem 0;
+  position: relative;
 }
 
-.techstack_title {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
+/* Flagship Core Stack Showcase */
+.core-stack-showcase {
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 1.25rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: 3.5rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
-.techstack_image_rows_container {
-    background: rgba(165, 165, 240, 0.4);
-    color: #fff;
-    border-radius: 1rem;
-    margin: auto;
-    margin-top: 2rem;
-    padding: 2%;
-
+.showcase-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
 }
 
-.techstack_image_row1_container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    flex-wrap: wrap;
-    gap: 1.8rem;
-    padding: 0rem 2rem;
+.zap-icon {
+  color: var(--color-accent-amber);
 }
 
-.techstack_image_element_container {
-    display: flex;
-    /* bydefault flex-direction is row */
-    flex-direction: column;
-    justify-content: space-evenly;
-    /*vertically center */
-    align-items: center;
-    /* horizontally center */
-    border-radius: 1rem;
-    background: rgba(0, 0, 22, 0.9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 1rem;
-    padding-top: 1rem;
-    margin-bottom: 15px;
-    transition: 0.2s;
-
+.core-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
 }
 
-.techstack_image_element_container:hover {
-
-    box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-    background-color: rgba(0, 0, 0, 0.9) !important;
+.core-stack-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.85rem;
+  transition: all var(--transition-normal);
 }
 
-.techstack_image_element_container>img {
-    width: 100px;
+.core-stack-card:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2);
 }
 
-.techstack_image_element_container>p {
-    text-align: center;
+.core-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 0.65rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
 }
 
-.color1 {
-    background-color: yellow;
+.tech-icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.tech-icon-abbr {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.core-card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.core-tech-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.core-tech-tag {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Category Filter Tabs */
+.tech-filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.filter-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-tab-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.filter-tab-btn.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.25) 0%, rgba(129, 140, 248, 0.25) 100%);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px -3px var(--color-primary-glow);
+}
+
+/* All Stack Bento Grid */
+.skill-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.skill-group-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.group-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.group-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.6rem;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.group-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.group-count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Default Multi-card Badge Tile Grid */
+.skills-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.85rem;
+}
+
+.tech-tile-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.tech-tile-badge:hover {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+}
+
+.tile-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.tile-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.tile-abbr {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.tile-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.tile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tile-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tile-level-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tile-tag {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Single Category View (Full Width Horizontal Grid) */
+.skill-groups-grid.single-view {
+  grid-template-columns: 1fr !important;
+}
+
+.skill-groups-grid.single-view .skills-badge-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  gap: 1.25rem !important;
+}
+
+.skill-groups-grid.single-view .tech-tile-badge {
+  padding: 1rem 1.25rem !important;
+  border-radius: 0.85rem !important;
+}
+
+.skill-groups-grid.single-view .tile-icon-box {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 0.65rem !important;
+}
+
+.skill-groups-grid.single-view .tile-img {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.skill-groups-grid.single-view .tile-abbr {
+  font-size: 0.9rem !important;
+}
+
+.skill-groups-grid.single-view .tile-name {
+  font-size: 1.02rem !important;
+}
+
+.skill-groups-grid.single-view .tile-tag {
+  font-size: 0.82rem !important;
+}
+
+@media (max-width: 768px) {
+  .skill-groups-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-badge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skill-groups-grid.single-view .skills-badge-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-badge-grid {
+    grid-template-columns: 1fr;
+  }
+  .skill-groups-grid.single-view .skills-badge-grid {
+    grid-template-columns: 1fr !important;
+  }
 }

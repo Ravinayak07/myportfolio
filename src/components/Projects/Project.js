@@ -1,71 +1,161 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Project.css";
-import ProjectBox from "./ProjectBox/ProjectBox";
-import portfolio from "../../images/projects/portfolio.png";
-import moviesBox from "../../images/projects/moviesBox.png";
-import ravikart from "../../images/projects/ravikart.png";
+import { 
+  FolderGit2, 
+  Github, 
+  Sparkles, 
+  Bot, 
+  Server, 
+  Smartphone, 
+  ShoppingBag,
+  ArrowUpRight
+} from "lucide-react";
 
 function Project({ id }) {
-  const projectData = [
+  const projects = [
     {
-      images: moviesBox,
-      title: "MoviesBox",
-      descriptions: [
-        "> Movie Application in which you can search for your favourite movies",
-        "> Shows Top Rated, Comedy, Actions Movies Separatly",
-        "> It is Deployed using Heroku.",
-        "Technologies - Reactjs, JavaScript, HTML, CSS, Firebase.",
+      title: "Merchant AI Assistant & RAG Microservice Mesh",
+      category: "AI & Distributed Backend",
+      featured: true,
+      icon: Bot,
+      description: "Production-grade merchant AI assistant engineered in Rust (Axum, Tokio) integrated with Google Gemini 2.0 Flash, a 15+ tool function calling registry, and Qdrant Vector DB for Retrieval-Augmented Generation (RAG). Deployed as a NATS JetStream microservice mesh to automate UPI QR generation, payouts, and transaction inquiries.",
+      highlights: [
+        "Natural-language chat automation for UPI payment status & settlement reporting",
+        "15+ tool function-calling registry handling real-time DB queries and payout APIs",
+        "Streamed responses and voice-to-text input integrated via Firebase AI & Gemini 2.0 Flash"
       ],
-      link: "https://github.com/Ravinayak07/moviesbox",
+      tech: ["Rust", "Axum/Tokio", "Google Gemini 2.0", "Qdrant Vector DB", "NATS JetStream", "Go (Fiber)", "PostgreSQL", "Redis"],
+      github: "https://github.com/Ravinayak07",
+      demo: "https://github.com/Ravinayak07"
     },
     {
-      images: ravikart,
-      title: "RaviKart",
-      descriptions: [
-        "> This an ecommerce Web Application where user can shop any items of his choice.",
-        "> It has Product Categories section, Signin , orders and cart sections",
-        "> It has 4 categories whose product details are fetched from an API",
-        "> Technologies - Reactjs, JavaScript, HTML, CSS, Heroku.",
+      title: "Enterprise Cloud Microservice Platform",
+      category: "Cloud & Microservices",
+      featured: true,
+      icon: Server,
+      description: "High-throughput enterprise platform powering 10+ microservices built with Spring Boot, Node.js, and React. Deployed on Azure App Services with zero-downtime Azure DevOps CI/CD pipelines, Docker containerization, OAuth 2.0/JWT RBAC, and Redis caching.",
+      highlights: [
+        "Maintained 99.9% uptime SLA across high-traffic enterprise workloads",
+        "Improved API response times by 30% through Redis caching & connection pooling",
+        "Reduced manual deployment overhead by 40% via automated Azure DevOps pipelines"
       ],
-      link: "https://ravikart.herokuapp.com/",
+      tech: ["React.js", "Node.js", "Spring Boot", "Azure App Services", "Azure DevOps", "Docker", "GraphQL", "Redis", "OAuth 2.0"],
+      github: "https://github.com/Ravinayak07",
+      demo: "https://github.com/Ravinayak07"
     },
     {
-      images: portfolio,
-      title: "My Portfolio",
-      descriptions: [
-        "> It is a website which answers to the question who am I?",
-        "> Have a look at it, and please feel free to contact anytime.",
-        "> It is deployed using heroku",
-        "Technologies - Reactjs, JavaScript, HTML, CSS, Firebase.",
+      title: "Multi-Platform Merchant Portal & Verification SDK",
+      category: "Full Stack & Native Mobile",
+      featured: false,
+      icon: Smartphone,
+      description: "Cross-platform merchant dashboard and administrative suite built with Vue 3, Nuxt 4, Vuetify, and Next.js. Complemented by native Android (Kotlin, Jetpack Compose) and iOS (Swift, SwiftUI) applications with a 35+ handler WebView bridge, MLKit document OCR, and WebAuthn passkeys.",
+      highlights: [
+        "Reusable TypeScript KYC SDK unifying merchant & admin compliance workflows",
+        "Integrated 6+ verification APIs (PAN, Aadhaar, GST, DigiLocker, Bank Verification)",
+        "Biometric 2FA (WebAuthn/Passkeys & TOTP) and Watch/Wear OS companion apps"
       ],
-      link: "https://rsn-portfolio.web.app/",
+      tech: ["Vue 3 / Nuxt 4", "TypeScript SDK", "Kotlin (Jetpack Compose)", "SwiftUI", "Pinia", "WebAuthn Passkeys", "MLKit OCR"],
+      github: "https://github.com/Ravinayak07",
+      demo: "https://github.com/Ravinayak07"
     },
     {
-      images: portfolio,
-      title: "The Hungry Snake",
-      descriptions: [
-        "> It is a website which answers to the question who am I?",
-        "> Have a look at it, and please feel free to contact anytime.",
-        "> It is deployed using heroku",
-        "Technologies - Reactjs, JavaScript, HTML, CSS, Firebase.",
+      title: "Zyadashop E-Commerce & Merchant Platform",
+      category: "Web & E-Commerce",
+      featured: false,
+      icon: ShoppingBag,
+      description: "Scalable e-commerce web platform and merchant management portal enabling over 1,000 online store businesses to build catalog storefronts, manage orders, process cart transactions, and publish customer apps to the Google Play Store.",
+      highlights: [
+        "Scaled platform to support over 1,000 merchant business online storefronts",
+        "Integrated real-time order notifications and Google Play Store release tooling",
+        "Responsive, high-conversion product catalog UI with full mobile responsiveness"
       ],
-      link: "https://github.com/Ravinayak07/The_Hungry_Snake",
-    },
+      tech: ["React.js", "Redux", "Node.js", "Express.js", "Android SDK", "Firebase"],
+      github: "https://github.com/Ravinayak07",
+      demo: "https://github.com/Ravinayak07"
+    }
   ];
+
   return (
-    <div id={id}>
-      <p className="project_title">PROJECTS</p>
-      <div className="projects_project_box_container">
-        {projectData.map((value, key) => (
-          <ProjectBox
-            img={value.images}
-            title={value.title}
-            descriptions={value.descriptions}
-            link={value.link}
-          />
-        ))}
+    <section id={id} className="projects-section">
+      <div className="container">
+        <div className="section-header">
+          <span className="section-tag">
+            <FolderGit2 size={14} /> Systems & Products
+          </span>
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="section-subtitle">
+            Highlighting production systems, microservice architectures, and full-stack AI engineering solutions.
+          </p>
+        </div>
+
+        <div className="projects-grid">
+          {projects.map((project, idx) => {
+            const Icon = project.icon;
+            return (
+              <motion.div
+                key={idx}
+                className={`project-card glass-card ${project.featured ? "featured" : ""}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="project-card-inner">
+                  <div className="project-card-header">
+                    <div className="project-icon-wrapper">
+                      <Icon size={22} />
+                    </div>
+                    <span className="project-cat-badge">{project.category}</span>
+                  </div>
+
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-desc">{project.description}</p>
+
+                  <div className="project-highlights">
+                    {project.highlights.map((h, hIdx) => (
+                      <div key={hIdx} className="highlight-item">
+                        <Sparkles size={14} className="sparkle-icon" />
+                        <span>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="project-tech-list">
+                    {project.tech.map((t, tIdx) => (
+                      <span key={tIdx} className="p-tech-tag">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="project-links-row">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link-btn"
+                    >
+                      <Github size={16} />
+                      <span>Repository</span>
+                    </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link-btn primary"
+                    >
+                      <span>Details</span>
+                      <ArrowUpRight size={16} />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

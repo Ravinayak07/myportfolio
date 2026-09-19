@@ -7,24 +7,24 @@ const Particle = () => {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine); // load slim bundle
+      await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    // Particles initialized
   };
 
   const options = useMemo(
     () => ({
       fullScreen: {
-        enable: false, // 👈 very important! Keeps it inside parent container
+        enable: false,
       },
       background: {
         color: {
-          value: "transparent", // 👈 make background transparent
+          value: "transparent",
         },
       },
       fpsLimit: 120,
@@ -44,43 +44,44 @@ const Particle = () => {
             quantity: 4,
           },
           repulse: {
-            distance: 200,
+            distance: 150,
             duration: 0.4,
           },
         },
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#38bdf8",
         },
         links: {
-          color: "#ffffff",
-          distance: 150,
+          color: "#38bdf8",
+          distance: 140,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.25,
           width: 1,
         },
         move: {
           enable: true,
-          speed: 6,
+          speed: 2,
           outModes: {
-            default: "bounce",
+            default: "out",
           },
         },
         number: {
           density: {
             enable: true,
+            area: 800,
           },
-          value: 80,
+          value: 65,
         },
         opacity: {
-          value: 0.5,
+          value: 0.4,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 1, max: 3 },
         },
       },
       detectRetina: true,
@@ -93,11 +94,13 @@ const Particle = () => {
   }
 
   return (
-    <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      options={options}
-    />
+    <div className="particles-background">
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
+    </div>
   );
 };
 
