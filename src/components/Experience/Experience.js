@@ -19,22 +19,21 @@ function Experience({ id }) {
       location: "Mumbai, Maharashtra, India",
       type: "Full-Time",
       isCurrent: true,
-      summary: "Leading multi-platform merchant payment ecosystem engineering, Rust AI microservice agents, Go backend services, and cross-platform native mobile applications.",
+      summary: "Building a multi-platform merchant payments ecosystem spanning a Rust AI agent, Go backend services, and Vue/Nuxt dashboards for onboarding, KYC, UPI payments, payouts, and settlements.",
       metrics: [
         { label: "AI Tool Registry", value: "15+ Tools" },
-        { label: "Verification APIs", value: "6+ Providers" },
-        { label: "Mobile Bridge", value: "35+ Handlers" }
+        { label: "Verification Providers", value: "6+" },
+        { label: "Microservice Mesh", value: "NATS JetStream" }
       ],
       points: [
-        "Built and shipped end-to-end features across a multi-platform merchant payments ecosystem spanning a Rust AI agent, Go backend services, native Android/iOS applications, and Vue/Nuxt dashboards.",
-        "Engineered a merchant-facing AI assistant in Rust (Axum, Tokio) integrating Google Gemini with a 15+ tool registry (function calling) and Qdrant-based RAG, deployed as a NATS JetStream microservice mesh to automate UPI QR generation, transaction inquiries, payouts, and operational workflows.",
-        "Implemented AI-powered experiences across Android and iOS using Firebase AI and Gemini 2.0 Flash, enabling voice input, function calling, streamed responses, and merchant self-service workflows directly within mobile applications.",
-        "Designed and maintained REST APIs and backend services in Go (Fiber) backed by PostgreSQL and Redis, powering merchant onboarding, KYC, payments, settlements, OTP handling, notifications, invoice generation, and PDF rendering.",
-        "Integrated 6+ verification and compliance providers (PAN, GST, Aadhaar, DigiLocker, bank-account verification, AML screening, OCR document processing) and built a reusable TypeScript KYC SDK.",
-        "Shipped cross-platform merchant features on Android (Kotlin, Jetpack Compose) and iOS (Swift, SwiftUI), including a 35+ handler WebView bridge, MLKit document OCR, dynamic UPI QR generation, and Watch/Wear companion applications.",
-        "Developed merchant-facing dashboards and internal admin tooling using Vue 3, Nuxt 3/4, Vuetify, Pinia, and Next.js with RBAC, 2FA (TOTP and WebAuthn passkeys), and Liquibase database migrations."
+        "Built and shipped end-to-end features across a multi-platform merchant payments ecosystem spanning a Rust AI agent, Go backend services, and Vue/Nuxt dashboards, supporting merchant onboarding, KYC, UPI payments, payouts, settlements, and transaction reporting workflows.",
+        "Engineered a merchant-facing AI assistant in Rust (Axum, Tokio) integrating Google Gemini and vLLM with a 15+ tool registry and Qdrant-based RAG, deployed as a NATS JetStream microservice mesh to automate UPI QR generation, transaction inquiries, payouts, and operational workflows through natural-language chat.",
+        "Designed and maintained REST APIs and backend services in Go (Fiber) backed by PostgreSQL and Redis, powering merchant onboarding, KYC, payments, settlements, OTP handling, notifications, invoice generation, PDF rendering, and third-party fintech integrations.",
+        "Integrated 6+ verification and compliance providers, including PAN, GST, Aadhaar, DigiLocker, bank-account verification, AML screening, and OCR-based document processing, streamlining merchant onboarding and compliance workflows.",
+        "Developed merchant-facing dashboards, internal admin panels, and operations tooling using Vue 3, Nuxt 3/4, Vuetify, Pinia, and Next.js, implementing RBAC, 2FA (TOTP and WebAuthn passkeys), document annotation workflows, reporting systems, and operational management tools.",
+        "Improved scalability and deployment reliability by implementing Dockerized services, Liquibase-managed database migrations, graceful shutdown handling, AWS S3 integrations, push notification systems, and automated PDF/Excel reporting pipelines for receipts and transaction analytics."
       ],
-      tech: ["Rust (Axum)", "Go (Fiber)", "Google Gemini 2.0", "Qdrant RAG", "NATS JetStream", "PostgreSQL", "Redis", "TypeScript SDK", "Vue 3 / Nuxt 4", "Jetpack Compose", "SwiftUI", "Docker"]
+      tech: ["Rust (Axum, Tokio)", "Go (Fiber)", "Google Gemini", "vLLM", "Qdrant RAG", "NATS JetStream", "PostgreSQL", "Redis", "Vue 3 / Nuxt 3/4", "Next.js", "Docker", "Liquibase", "AWS S3"]
     },
     {
       role: "Full Stack Developer",
@@ -43,36 +42,38 @@ function Experience({ id }) {
       location: "Pune, Maharashtra, India",
       type: "Full-Time",
       isCurrent: false,
-      summary: "Architected and delivered enterprise-grade web applications, Spring Boot/Node.js microservices, and cloud infrastructure on Azure with high availability.",
+      summary: "Architected and delivered enterprise-grade web applications, Node.js microservices, and cloud infrastructure on Azure with high availability.",
       metrics: [
         { label: "System Uptime", value: "99.9%" },
         { label: "API Speedup", value: "+30%" },
-        { label: "DevOps Efficiency", value: "-40% Overhead" }
+        { label: "Deployment Overhead", value: "-40%" }
       ],
       points: [
-        "Architected, developed, and deployed 10+ enterprise-grade web applications using React.js, Node.js, and Spring Boot hosted on Azure App Services with 99.9% uptime, enhancing deployment efficiency by 35%.",
-        "Designed and developed RESTful and GraphQL APIs across Node.js and Spring Boot microservices, enabling scalable inter-service communication and improving API response times by 30%.",
-        "Integrated secure authentication using OAuth 2.0 and JWT, implementing Role-Based Access Control (RBAC) to enforce enterprise security standards.",
-        "Containerized services with Docker and deployed via Azure DevOps CI/CD pipelines, reducing manual deployment overhead by 40% and ensuring zero-downtime releases.",
-        "Enhanced backend performance through Redis caching, asynchronous event handling, connection pooling, and configured Azure App Services, Blob Storage, Function Apps, and Application Insights."
+        "Architected, developed, and deployed 10+ enterprise-grade web applications using React.js and Node.js hosted on Azure App Services with 99.9% uptime, enhancing deployment efficiency by 35%.",
+        "Designed and developed RESTful and GraphQL APIs across Node.js, enabling scalable inter-service communication and improving API response times by 30%.",
+        "Integrated secure authentication using OAuth 2.0 and JWT, implementing Role-Based Access Control (RBAC) and ensuring compliance with enterprise-grade security standards.",
+        "Built and optimized microservice-based architectures, containerized with Docker, and deployed via Azure DevOps CI/CD pipelines, reducing manual deployment overhead by 40% and ensuring zero-downtime releases.",
+        "Enhanced backend performance through caching (Redis), asynchronous event handling, and connection pooling, reducing latency and improving throughput for high-traffic systems.",
+        "Configured and monitored Azure resources including App Services, Blob Storage, Function Apps, and Application Insights, implementing environment-based configurations for staging and production workloads.",
+        "Automated system health checks, log analysis, and maintenance tasks using PowerShell scripts and Azure Monitor, improving system reliability and observability across deployments."
       ],
-      tech: ["React.js", "Node.js", "Spring Boot", "Azure App Services", "Docker", "Azure DevOps CI/CD", "GraphQL", "Redis", "OAuth 2.0", "PowerShell"]
+      tech: ["React.js", "Node.js", "GraphQL", "Azure App Services", "Azure DevOps CI/CD", "Docker", "Redis", "OAuth 2.0 / JWT", "Azure Monitor", "PowerShell"]
     },
     {
       role: "Python Instructor",
       company: "CodeBeat",
       period: "Aug 2023 – Sept 2023",
       location: "Bhubaneswar, Odisha, India",
-      type: "Contract",
+      type: "Internship",
       isCurrent: false,
-      summary: "Educated engineering students in Python programming, Data Structures & Algorithms, and competitive problem solving.",
+      summary: "Taught engineering students Python programming, data structures & algorithms, and competitive problem solving.",
       metrics: [
-        { label: "Student Score", value: "+25% Boost" },
-        { label: "Internship Success", value: "80% Rate" }
+        { label: "Assessment Scores", value: "+25%" },
+        { label: "Internship Placement", value: "80%" }
       ],
       points: [
-        "Delivered 20+ interactive Python programming sessions covering core data structures, algorithms, and object-oriented programming, improving students' coding scores by 25%.",
-        "Conducted 10+ hands-on workshops preparing 30+ students for tech industry roles, resulting in 80% of students securing internships within 3 months."
+        "Delivered 20+ interactive Python programming sessions covering data structures and algorithms and object-oriented programming, improving students' problem-solving abilities and increasing their average coding assessment scores by 25%.",
+        "Conducted 10+ hands-on coding workshops on advanced Python topics, preparing 30+ students for competitive programming and tech industry roles, resulting in 80% of students securing internships within 3 months of course completion."
       ],
       tech: ["Python", "Data Structures & Algorithms", "Object-Oriented Programming", "Competitive Coding"]
     },
@@ -83,17 +84,17 @@ function Experience({ id }) {
       location: "Bhubaneswar, Odisha, India",
       type: "Internship",
       isCurrent: false,
-      summary: "Built landing pages, e-commerce account portals, and published native mobile applications to the Google Play Store.",
+      summary: "Built landing pages and a multi-merchant e-commerce platform, and published customer apps to the Google Play Store.",
       metrics: [
-        { label: "Businesses Scaled", value: "1000+" },
+        { label: "Businesses Onboarded", value: "1000+" },
         { label: "User Engagement", value: "+15%" }
       ],
       points: [
-        "Developed and optimized responsive landing pages for AppyFlux and Zyadashop using HTML, CSS, JavaScript, PHP, and Bootstrap, increasing brand visibility by 30%.",
-        "Collaborated in building a scalable e-commerce platform using React, Redux, and Node.js, enabling over 1,000 businesses to create and manage online stores.",
-        "Published customer applications on the Google Play Store using Android SDK and Firebase, maintaining daily notifications that led to a 15% increase in user retention."
+        "Developed and optimized responsive landing pages for AppyFlux and Zyadashop using HTML, CSS, JavaScript, PHP, and Bootstrap, enhancing user engagement and increasing brand visibility by 30%.",
+        "Collaborated in building a scalable e-commerce platform using React, Redux, and Node.js, enabling over 1,000 businesses to create, manage, and scale their online stores effectively.",
+        "Published and managed customer applications on the Google Play Store using Android SDK and Firebase, maintaining daily notifications that led to a 15% increase in user engagement and retention."
       ],
-      tech: ["React.js", "Redux", "Node.js", "JavaScript", "Android SDK", "Firebase", "Bootstrap"]
+      tech: ["React.js", "Redux", "Node.js", "JavaScript", "PHP", "Bootstrap", "Android SDK", "Firebase"]
     }
   ];
 

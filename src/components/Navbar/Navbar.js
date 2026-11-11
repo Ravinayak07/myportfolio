@@ -74,7 +74,7 @@ function Navbar() {
 
         <div className="navbar-actions">
           <a
-            href="https://www.linkedin.com/in/ravi-shankar-nayak-302881192/"
+            href="https://www.linkedin.com/in/ravishankarnayak/"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar-cta-btn"
@@ -108,7 +108,7 @@ function Navbar() {
               </button>
             ))}
             <a
-              href="https://www.linkedin.com/in/ravi-shankar-nayak-302881192/"
+              href="https://www.linkedin.com/in/ravishankarnayak/"
               target="_blank"
               rel="noopener noreferrer"
               className="mobile-cta-btn"

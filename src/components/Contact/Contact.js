@@ -43,7 +43,7 @@ function Contact({ id }) {
                 <span>Send Email</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/ravi-shankar-nayak-302881192/"
+                href="https://www.linkedin.com/in/ravishankarnayak/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
@@ -113,7 +113,7 @@ function Contact({ id }) {
             <span>Ravi Shankar Nayak</span>
           </div>
           <p className="copyright-text">
-            © 2026 Ravi Shankar Nayak. Built with React, Tailwind & High-Performance Engineering.
+            © 2026 Ravi Shankar Nayak.
           </p>
         </div>
       </div>

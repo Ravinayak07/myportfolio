@@ -1,7 +1,6 @@
 import React from "react";
 import "./About.css";
 import TypedComponent from "./TypedComponent";
-import profileImg from "../../images/profile2.jpeg";
 import Particle from "../../Particle";
 import { 
   Github, 
@@ -14,6 +13,8 @@ import {
   Terminal, 
   ArrowRight
 } from "lucide-react";
+
+const profileImg = `${process.env.PUBLIC_URL}/profile.png`;
 
 function About({ id }) {
   const scrollToSection = (sectionId) => {
@@ -128,7 +129,7 @@ function About({ id }) {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/ravi-shankar-nayak-302881192/"
+              href="https://www.linkedin.com/in/ravishankarnayak/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon-btn"
